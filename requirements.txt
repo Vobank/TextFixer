@@ -1,0 +1,7 @@
+requests>=2.31
+pyperclip>=1.8
+pynput>=1.7
+keyboard>=0.13
+pystray>=0.19
+Pillow>=10.0
+wordfreq>=3.0
