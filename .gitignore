@@ -19,6 +19,13 @@ credentials.json
 token.json
 service_account.json
 config.json
+user_dict.json
+user_dict.json.tmp
+# T9 dictionaries are downloaded on first run (GitHub Releases) and are not part of the repository
+dicts/
+dist/
+textfixer/data/
+*.part
 web/config.json
 memory.json
 chats.json

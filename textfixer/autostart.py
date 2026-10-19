@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-"""Автозапуск с Windows через раздел реестра HKCU\\...\\Run.
-Запускает тихо (pythonw) из venv проекта, без окна консоли."""
+"""Start with Windows via the HKCU\\...\\Run registry key.
+Launches silently (pythonw) from the project's venv, without a console window."""
 
 import os
 import sys
@@ -16,7 +16,7 @@ _PROJECT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 def _command():
-    """Команда запуска: pythonw из venv + main.py проекта."""
+    """Launch command: pythonw from the venv + the project's main.py."""
     pyw = os.path.join(_PROJECT, ".venv", "Scripts", "pythonw.exe")
     if not os.path.exists(pyw):
         pyw = sys.executable.replace("python.exe", "pythonw.exe")
@@ -45,7 +45,7 @@ def enable():
             winreg.SetValueEx(k, APP_NAME, 0, winreg.REG_SZ, _command())
         return True
     except OSError as e:
-        print(f"[autostart] не удалось включить: {e}")
+        print(f"[autostart] failed to enable: {e}")
         return False
 
 
@@ -60,12 +60,12 @@ def disable():
     except FileNotFoundError:
         return True
     except OSError as e:
-        print(f"[autostart] не удалось выключить: {e}")
+        print(f"[autostart] failed to disable: {e}")
         return False
 
 
 def toggle():
-    """Переключает автозапуск. Возвращает новое состояние (True/False)."""
+    """Toggles autostart. Returns the new state (True/False)."""
     if is_enabled():
         disable()
         return False

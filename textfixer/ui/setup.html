@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TextFixer — languages</title>
+<style>
+/* Inter (OFL, fonts/LICENSE-Inter.txt) — bundled so the window looks the same everywhere */
+@font-face { font-family: "Inter TF"; font-weight: 100 900; font-display: swap; src: url(fonts/inter-latin.woff2) format("woff2");
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD; }
+@font-face { font-family: "Inter TF"; font-weight: 100 900; font-display: swap; src: url(fonts/inter-latin-ext.woff2) format("woff2");
+  unicode-range: U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF; }
+@font-face { font-family: "Inter TF"; font-weight: 100 900; font-display: swap; src: url(fonts/inter-cyrillic.woff2) format("woff2");
+  unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116; }
+@font-face { font-family: "Inter TF"; font-weight: 100 900; font-display: swap; src: url(fonts/inter-cyrillic-ext.woff2) format("woff2");
+  unicode-range: U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F; }
+@font-face { font-family: "Inter TF"; font-weight: 100 900; font-display: swap; src: url(fonts/inter-greek.woff2) format("woff2");
+  unicode-range: U+0370-03FF; }
+@font-face { font-family: "Inter TF"; font-weight: 100 900; font-display: swap; src: url(fonts/inter-greek-ext.woff2) format("woff2");
+  unicode-range: U+1F00-1FFF; }
+@font-face { font-family: "Inter TF"; font-weight: 100 900; font-display: swap; src: url(fonts/inter-vietnamese.woff2) format("woff2");
+  unicode-range: U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB; }
+:root {
+  --bg: #0b0c12;
+  --bg2: #11131c;
+  --card: rgba(255,255,255,.035);
+  --card-h: rgba(255,255,255,.065);
+  --line: rgba(255,255,255,.08);
+  --line2: rgba(255,255,255,.14);
+  --fg: #f3f4f8;
+  --dim: #9aa0b4;
+  --dim2: #6b7189;
+  --acc: #7c5cff;
+  --acc2: #20c3ff;
+  --ok: #3ddc97;
+  --warn: #ffb547;
+  --bad: #ff5c7a;
+  --radius: 16px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body, input, button, kbd {
+  font-family: "Inter TF", "Segoe UI Variable Text", "Segoe UI", Arial, sans-serif;
+  font-feature-settings: "cv11", "ss01";
+}
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-size: 14px; line-height: 1.45;
+  overflow: hidden;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+}
+/* soft background glow */
+body::before, body::after {
+  content: ""; position: fixed; z-index: 0; pointer-events: none;
+  width: 720px; height: 720px; border-radius: 50%; filter: blur(110px); opacity: .32;
+}
+body::before { background: radial-gradient(circle, #6a4bff 0%, transparent 65%); top: -380px; left: -200px; }
+body::after  { background: radial-gradient(circle, #00b4ff 0%, transparent 65%); bottom: -420px; right: -260px; opacity: .22; }
+
+.app { position: relative; z-index: 1; height: 100%; display: flex; flex-direction: column; }
+
+/* ---------- window title bar ---------- */
+.titlebar {
+  height: 44px; flex: none; display: flex; align-items: center; padding: 0 8px 0 18px;
+  -webkit-app-region: drag;
+}
+.titlebar .t { color: var(--dim2); font-size: 12px; letter-spacing: .3px; }
+.titlebar .sp { flex: 1; }
+.winbtn {
+  -webkit-app-region: no-drag; width: 40px; height: 32px; border: 0; border-radius: 8px;
+  background: transparent; color: var(--dim); font-size: 16px; cursor: pointer;
+  display: grid; place-items: center; transition: background .15s, color .15s;
+}
+.winbtn:hover { background: rgba(255,255,255,.08); color: var(--fg); }
+.winbtn.close:hover { background: #e5484d; color: #fff; }
+
+/* ---------- header ---------- */
+header { padding: 6px 36px 18px; flex: none; display: flex; gap: 20px; align-items: center; }
+.logo {
+  width: 58px; height: 58px; border-radius: 18px; flex: none; display: grid; place-items: center;
+  background: linear-gradient(135deg, var(--acc) 0%, var(--acc2) 100%);
+  box-shadow: 0 10px 30px -8px rgba(124,92,255,.65), inset 0 1px 0 rgba(255,255,255,.35);
+  font-weight: 800; font-size: 22px; letter-spacing: -1px; color: #fff;
+}
+h1 { font-size: 26px; font-weight: 700; letter-spacing: -.4px; }
+h1 .grad {
+  background: linear-gradient(90deg, #b9a8ff, #7fe0ff); -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.sub { color: var(--dim); margin-top: 3px; max-width: 620px; }
+
+/* ---------- search bar ---------- */
+.tools { padding: 0 36px 14px; flex: none; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.search {
+  flex: 1; min-width: 240px; position: relative;
+}
+.search input {
+  width: 100%; height: 42px; border-radius: 12px; border: 1px solid var(--line);
+  background: rgba(255,255,255,.04); color: var(--fg); font-size: 14px; padding: 0 14px 0 40px;
+  outline: none; transition: border-color .15s, background .15s, box-shadow .15s;
+}
+.search input:focus { border-color: rgba(124,92,255,.7); background: rgba(255,255,255,.06); box-shadow: 0 0 0 4px rgba(124,92,255,.15); }
+.search svg { position: absolute; left: 13px; top: 12px; opacity: .55; }
+.chip {
+  height: 42px; padding: 0 16px; border-radius: 12px; border: 1px solid var(--line);
+  background: rgba(255,255,255,.03); color: var(--dim); font-size: 14px; cursor: pointer;
+  transition: all .15s; white-space: nowrap;
+}
+.chip:hover { color: var(--fg); border-color: var(--line2); background: rgba(255,255,255,.06); }
+
+/* ---------- list ---------- */
+main {
+  flex: 1; overflow-y: auto; padding: 4px 36px 120px; scroll-behavior: smooth;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0, #000 calc(100% - 120px), transparent calc(100% - 30px));
+}
+main::-webkit-scrollbar { width: 10px; }
+main::-webkit-scrollbar-thumb { background: rgba(255,255,255,.1); border-radius: 10px; border: 3px solid transparent; background-clip: content-box; }
+.group { margin-top: 18px; }
+.group h2 {
+  font-size: 12px; text-transform: uppercase; letter-spacing: 1.4px; color: var(--dim2); font-weight: 600;
+  margin: 0 0 10px 2px; display: flex; gap: 8px; align-items: center;
+}
+.group h2 .n { background: rgba(255,255,255,.06); color: var(--dim); border-radius: 20px; padding: 0 8px; font-size: 11px; letter-spacing: 0; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px; }
+
+.card {
+  position: relative; overflow: hidden; display: flex; align-items: center; gap: 12px;
+  padding: 12px 14px; border-radius: var(--radius); border: 1px solid var(--line);
+  background: var(--card); cursor: pointer;
+  transition: transform .18s cubic-bezier(.2,.8,.2,1), background .18s, border-color .18s, box-shadow .18s;
+  animation: pop .35s cubic-bezier(.2,.8,.2,1) both;
+}
+.card:hover { background: var(--card-h); transform: translateY(-2px); border-color: var(--line2); }
+.card.on {
+  border-color: rgba(124,92,255,.75);
+  background: linear-gradient(135deg, rgba(124,92,255,.16), rgba(32,195,255,.07));
+  box-shadow: 0 8px 26px -14px rgba(124,92,255,.9);
+}
+.card.dis { cursor: default; }
+@keyframes pop { from { opacity: 0; transform: translateY(6px) scale(.985); } to { opacity: 1; transform: none; } }
+
+.badge {
+  width: 40px; height: 40px; border-radius: 12px; flex: none; display: grid; place-items: center;
+  font-weight: 750; font-size: 13px; letter-spacing: .4px; color: #fff; text-transform: uppercase;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.3), 0 6px 14px -8px rgba(0,0,0,.8);
+}
+.meta { flex: 1; min-width: 0; }
+.nat { font-weight: 600; font-size: 14.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ru { color: var(--dim); font-size: 12.5px; display: flex; gap: 6px; align-items: center; white-space: nowrap; }
+.dot { width: 6px; height: 6px; border-radius: 50%; background: var(--ok); box-shadow: 0 0 8px var(--ok); flex: none; }
+.size { color: var(--dim2); font-size: 12px; margin-left: auto; white-space: nowrap; }
+
+.check {
+  width: 22px; height: 22px; border-radius: 7px; flex: none; border: 1.5px solid var(--line2);
+  display: grid; place-items: center; transition: all .18s cubic-bezier(.2,.8,.2,1);
+}
+.check svg { width: 13px; height: 13px; opacity: 0; transform: scale(.4); transition: all .18s cubic-bezier(.2,.8,.2,1); }
+.card.on .check { background: linear-gradient(135deg, var(--acc), var(--acc2)); border-color: transparent; }
+.card.on .check svg { opacity: 1; transform: none; }
+
+.bar { position: absolute; left: 0; bottom: 0; height: 3px; width: 0; background: linear-gradient(90deg, var(--acc), var(--acc2)); transition: width .25s; }
+.card.done .bar { background: var(--ok); }
+.card.err .bar { background: var(--bad); width: 100% !important; }
+.state { font-size: 11.5px; color: var(--dim); }
+.card.err .state { color: var(--bad); }
+.card.done .state { color: var(--ok); }
+.tag { font-size: 10.5px; color: var(--warn); border: 1px solid rgba(255,181,71,.35); border-radius: 6px; padding: 0 5px; }
+
+.empty { color: var(--dim2); text-align: center; padding: 50px 0; display: none; }
+
+/* ---------- bottom bar ---------- */
+footer {
+  position: absolute; left: 20px; right: 20px; bottom: 18px; z-index: 5;
+  display: flex; align-items: center; gap: 16px; padding: 14px 16px 14px 22px;
+  border-radius: 20px; border: 1px solid var(--line2);
+  background: rgba(20,22,34,.72); backdrop-filter: blur(22px) saturate(140%);
+  box-shadow: 0 20px 50px -20px rgba(0,0,0,.9);
+}
+.sum { flex: 1; min-width: 0; }
+.sum b { font-size: 15px; }
+.sum .s2 { color: var(--dim); font-size: 12.5px; }
+.prog { height: 6px; border-radius: 6px; background: rgba(255,255,255,.08); overflow: hidden; margin-top: 8px; display: none; }
+.prog i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--acc), var(--acc2)); transition: width .25s; border-radius: 6px; }
+.btn {
+  height: 46px; padding: 0 24px; border-radius: 14px; border: 0; cursor: pointer; font-size: 14.5px; font-weight: 600;
+  color: #fff; background: linear-gradient(135deg, var(--acc) 0%, #5a7dff 55%, var(--acc2) 100%);
+  box-shadow: 0 10px 24px -10px rgba(124,92,255,.9), inset 0 1px 0 rgba(255,255,255,.3);
+  transition: transform .15s, filter .15s, opacity .15s; white-space: nowrap;
+}
+.btn:hover { transform: translateY(-1px); filter: brightness(1.08); }
+.btn:active { transform: translateY(0); }
+.btn:disabled { opacity: .45; cursor: default; transform: none; filter: grayscale(.4); }
+.ghost {
+  height: 46px; padding: 0 18px; border-radius: 14px; border: 1px solid var(--line2); background: transparent;
+  color: var(--dim); font-size: 14px; cursor: pointer; transition: all .15s;
+}
+.ghost:hover { color: var(--fg); background: rgba(255,255,255,.05); }
+
+/* ---------- "done" screen ---------- */
+.done-screen {
+  position: absolute; inset: 0; z-index: 20; display: none; place-items: center; text-align: center;
+  background: rgba(11,12,18,.86); backdrop-filter: blur(14px);
+}
+.done-screen.show { display: grid; animation: fade .35s ease both; }
+@keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+.ring {
+  width: 108px; height: 108px; border-radius: 50%; margin: 0 auto 22px; display: grid; place-items: center;
+  background: radial-gradient(circle at 30% 30%, #4ff0b0, #1aa974);
+  box-shadow: 0 0 0 12px rgba(61,220,151,.1), 0 0 60px rgba(61,220,151,.45);
+  animation: popin .5s cubic-bezier(.2,1.4,.3,1) both .05s;
+}
+@keyframes popin { from { transform: scale(.4); opacity: 0; } to { transform: none; opacity: 1; } }
+.ring svg path { stroke-dasharray: 60; stroke-dashoffset: 60; animation: draw .45s ease forwards .35s; }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+.done-screen h3 { font-size: 26px; letter-spacing: -.3px; }
+.done-screen p { color: var(--dim); margin: 6px 0 26px; }
+.keys { display: inline-grid; grid-template-columns: auto auto; gap: 8px 14px; text-align: left; color: var(--dim); margin-bottom: 26px; font-size: 13px; }
+kbd {
+  display: inline-block; min-width: 26px; padding: 2px 8px; border-radius: 7px; text-align: center;
+  background: rgba(255,255,255,.07); border: 1px solid var(--line2); border-bottom-width: 2px;
+  color: var(--fg); font-size: 12px; font-weight: 600;
+}
+.toast {
+  position: absolute; top: 56px; left: 50%; transform: translateX(-50%); z-index: 30;
+  background: rgba(255,92,122,.14); border: 1px solid rgba(255,92,122,.45); color: #ffd0d9;
+  padding: 10px 16px; border-radius: 12px; display: none; max-width: 80%;
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="titlebar pywebview-drag-region">
+    <span class="t">TextFixer · T9</span><span class="sp"></span>
+    <button class="winbtn" data-title="minimize" onclick="api('minimize')">&#8211;</button>
+    <button class="winbtn close" data-title="close" onclick="api('close')">&#10005;</button>
+  </div>
+
+  <header class="pywebview-drag-region">
+    <div class="logo">TF</div>
+    <div>
+      <h1 id="title"></h1>
+      <div class="sub" id="subtitle"></div>
+    </div>
+  </header>
+
+  <div class="tools">
+    <label class="search">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" data-ph="search" autocomplete="off" spellcheck="false">
+    </label>
+    <button class="chip" data-t="my_layouts" onclick="pickSystem()"></button>
+    <button class="chip" data-t="clear" onclick="pickNone()"></button>
+  </div>
+
+  <main id="list"></main>
+  <div class="empty" id="empty" data-t="nothing_found"></div>
+
+  <footer>
+    <div class="sum">
+      <b id="sumA"></b>
+      <div class="s2" id="sumB"></div>
+      <div class="prog" id="prog"><i id="progI"></i></div>
+    </div>
+    <button class="ghost" id="later" data-t="later" onclick="api('close')"></button>
+    <button class="btn" id="go" onclick="start()" disabled></button>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <div class="done-screen" id="done">
+    <div>
+      <div class="ring"><svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.2 4.2L19 7"/></svg></div>
+      <h3 data-t="done_title"></h3>
+      <p id="doneP"></p>
+      <div class="keys">
+        <kbd>Tab</kbd><span data-t="k_tab"></span>
+        <kbd>Shift+Tab</kbd><span data-t="k_stab"></span>
+        <kbd>Backspace</kbd><span data-t="k_back"></span>
+        <kbd>Ctrl+Alt+T</kbd><span data-t="k_t9"></span>
+        <kbd>Ctrl+Alt+C</kbd><span data-t="k_fix"></span>
+      </div><br>
+      <button class="btn" data-t="start_typing" onclick="api('finish')"></button>
+    </div>
+  </div>
+</div>
+
+<script>
+let S = null;            // state from Python
+let L = {};              // interface strings (en / ru …)
+const sel = new Set();
+let busy = false;
+
+const CHECK = '<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.2 4.2L19 7"/></svg>';
+
+function f(key, vars) {  // string with {placeholders}
+  let s = L[key] || key;
+  for (const [k, v] of Object.entries(vars || {})) s = s.split('{' + k + '}').join(v);
+  return s;
+}
+function plural(n) {
+  if (L._lang === 'ru') {
+    const m = n % 10, h = n % 100;
+    return m === 1 && h !== 11 ? L.lang1 : (m >= 2 && m <= 4 && (h < 12 || h > 14) ? L.lang2 : L.lang5);
+  }
+  return n === 1 ? L.lang1 : L.lang2;
+}
+function hue(code) {     // stable badge colour per language code
+  let h = 0; for (const c of code) h = (h * 31 + c.charCodeAt(0)) % 360;
+  return h;
+}
+function mb(b) { return b ? (b / 1048576).toFixed(b > 10485760 ? 0 : 1) + ' ' + L.mb : '—'; }
+function esc(s) { return String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+
+async function api(name, ...args) {
+  if (!window.pywebview) return null;
+  return await window.pywebview.api[name](...args);
+}
+
+function stateText(l, on) {
+  return l.installed ? (on ? L.installed : L.will_remove) : (on ? L.will_download : '');
+}
+
+function render() {
+  const q = document.getElementById('q').value.trim().toLowerCase();
+  const list = document.getElementById('list');
+  let html = '', shown = 0, i = 0;
+  for (const [gid, gname] of S.groups) {
+    const items = S.langs.filter(l => l.group === gid && (!q ||
+      (l.code + ' ' + l.native + ' ' + l.name).toLowerCase().includes(q)));
+    if (!items.length) continue;
+    shown += items.length;
+    html += `<section class="group"><h2>${esc(gname)} <span class="n">${items.length}</span></h2><div class="grid">`;
+    for (const l of items) {
+      const h = hue(l.code);
+      const on = sel.has(l.code);
+      const st = l.state || stateText(l, on);
+      html += `<div class="card ${on ? 'on' : ''} ${l.state === L.done ? 'done' : ''} ${l.error ? 'err' : ''}"
+                    data-code="${l.code}" style="animation-delay:${Math.min(i++ * 12, 360)}ms" onclick="toggle('${l.code}')">
+        <div class="badge" style="background:linear-gradient(135deg,hsl(${h} 70% 56%),hsl(${(h + 40) % 360} 75% 44%))">${l.code}</div>
+        <div class="meta">
+          <div class="nat">${esc(l.native)}</div>
+          <div class="ru">${l.installed ? `<span class="dot" title="${esc(L.installed)}"></span>` : ''}${l.name !== l.native ? esc(l.name) : ''}
+            ${l.hunspell === false ? `<span class="tag" title="${esc(L.basic_tip)}">${esc(L.basic)}</span>` : ''}
+            <span class="size">${l.error ? '' : mb(l.size)}</span></div>
+          <div class="state">${esc(l.error || st)}</div>
+        </div>
+        <div class="check">${CHECK}</div>
+        <div class="bar" style="width:${l.pct || 0}%"></div>
+      </div>`;
+    }
+    html += '</div></section>';
+  }
+  list.innerHTML = html;
+  document.getElementById('empty').style.display = shown ? 'none' : 'block';
+  summary();
+}
+
+function summary() {
+  const chosen = S.langs.filter(l => sel.has(l.code));
+  const need = chosen.filter(l => !l.installed);
+  const bytes = need.reduce((a, l) => a + (l.size || 0), 0);
+  const rem = S.langs.filter(l => l.installed && !sel.has(l.code)).length;
+  document.getElementById('sumA').textContent = f('selected', {n: chosen.length, langs: plural(chosen.length)});
+  let b = need.length ? f('to_download', {n: need.length, size: mb(bytes)}) : (chosen.length ? L.all_downloaded : L.pick_one);
+  if (rem) b += f('to_remove', {n: rem});
+  if (!busy) document.getElementById('sumB').textContent = b;
+  const go = document.getElementById('go');
+  go.disabled = busy || !chosen.length;
+  if (!busy) go.textContent = need.length ? L.download_start : L.done_btn;
+}
+
+function toggle(code) {
+  if (busy) return;
+  sel.has(code) ? sel.delete(code) : sel.add(code);
+  const card = document.querySelector(`.card[data-code="${code}"]`);
+  if (card) {
+    card.classList.toggle('on', sel.has(code));
+    const l = S.langs.find(x => x.code === code);
+    card.querySelector('.state').textContent = stateText(l, sel.has(code));
+  }
+  summary();
+}
+function pickSystem() { if (busy) return; S.system.forEach(c => sel.add(c)); render(); }
+function pickNone() { if (busy) return; sel.clear(); render(); }
+
+function toast(msg) {
+  const el = document.getElementById('toast'); el.textContent = msg; el.style.display = 'block';
+  clearTimeout(el._h); el._h = setTimeout(() => el.style.display = 'none', 6000);
+}
+
+async function start() {
+  if (busy) return;
+  const chosen = [...sel];
+  busy = true;
+  document.getElementById('go').disabled = true;
+  document.getElementById('go').textContent = L.downloading;
+  document.getElementById('later').style.display = 'none';
+  document.getElementById('prog').style.display = 'block';
+  await api('start', chosen);
+  poll();
+}
+
+async function poll() {
+  const p = await api('progress');
+  if (!p) return setTimeout(poll, 300);
+  for (const [code, st] of Object.entries(p.langs)) {
+    const l = S.langs.find(x => x.code === code); if (!l) continue;
+    Object.assign(l, st);
+    const card = document.querySelector(`.card[data-code="${code}"]`);
+    if (card) {
+      card.querySelector('.bar').style.width = (st.pct || 0) + '%';
+      card.querySelector('.state').textContent = st.error || st.state || '';
+      card.classList.toggle('done', st.state === L.done);
+      card.classList.toggle('err', !!st.error);
+    }
+  }
+  document.getElementById('progI').style.width = p.pct + '%';
+  document.getElementById('sumB').textContent = p.text;
+  if (!p.finished) return setTimeout(poll, 200);
+  busy = false;
+  if (p.errors) {
+    toast(f('toast_errors', {n: p.errors}));
+    S = await api('state'); render();
+    document.getElementById('later').style.display = '';
+    return;
+  }
+  document.getElementById('doneP').textContent = f('done_text', {n: p.count, langs: p.langs_word, names: p.names});
+  document.getElementById('done').classList.add('show');
+}
+
+function applyStrings() {
+  document.querySelectorAll('[data-t]').forEach(el => el.textContent = L[el.dataset.t] || '');
+  document.querySelectorAll('[data-ph]').forEach(el => el.placeholder = L[el.dataset.ph] || '');
+  document.querySelectorAll('[data-title]').forEach(el => el.title = L[el.dataset.title] || '');
+  document.getElementById('title').innerHTML = S.first_run ? L.h_first : L.h_again;
+  document.getElementById('subtitle').textContent = S.first_run ? L.sub_first : L.sub_again;
+  document.title = L.win_title;
+  document.documentElement.lang = L._lang || 'en';
+}
+
+async function init() {
+  S = await api('state');
+  if (!S) return;
+  L = S.strings || {};
+  applyStrings();
+  (S.selected.length ? S.selected : S.system).forEach(c => sel.add(c));
+  if (S.unpublished) toast(L.toast_unpublished);
+  else if (S.offline) toast(L.toast_offline);
+  render();
+}
+document.getElementById('q').addEventListener('input', render);
+window.addEventListener('pywebviewready', init);
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && !busy) api('close'); });
+</script>
+</body>
+</html>

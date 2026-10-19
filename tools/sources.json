@@ -1,0 +1,822 @@
+{
+ "ru": {
+  "hunspell": {
+   "aff": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/ru/index.aff",
+   "dic": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/ru/index.dic",
+   "src": "wooorm/dictionaries (ru)"
+  },
+  "corpus": {
+   "name": "rus_news_2024_1M",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/rus_news_2024_1M.tar.gz",
+   "all": [
+    "rus_news_2024_1M",
+    "rus_news_2023_1M",
+    "rus_news_2022_1M",
+    "rus_news_2021_1M",
+    "rus_news_2020_1M",
+    "rus_news_2019_1M"
+   ]
+  }
+ },
+ "en": {
+  "hunspell": {
+   "aff": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/en/index.aff",
+   "dic": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/en/index.dic",
+   "src": "wooorm/dictionaries (en)"
+  },
+  "corpus": {
+   "name": "eng_web_2014_1M",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/eng_web_2014_1M.tar.gz",
+   "all": [
+    "eng_web_2014_1M",
+    "eng_web_2012_1M",
+    "eng_web_2011_1M",
+    "eng_news_2024_1M",
+    "eng_news_2023_1M",
+    "eng_news_2020_1M"
+   ]
+  }
+ },
+ "uk": {
+  "hunspell": {
+   "aff": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/uk/index.aff",
+   "dic": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/uk/index.dic",
+   "src": "wooorm/dictionaries (uk)"
+  },
+  "corpus": {
+   "name": "ukr_web_2012_1M",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/ukr_web_2012_1M.tar.gz",
+   "all": [
+    "ukr_web_2012_1M",
+    "ukr_news_2024_1M",
+    "ukr_news_2023_1M",
+    "ukr_news_2022_1M",
+    "ukr_news_2020_1M",
+    "ukr_news_2019_1M"
+   ]
+  }
+ },
+ "de": {
+  "hunspell": {
+   "aff": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/de/index.aff",
+   "dic": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/de/index.dic",
+   "src": "wooorm/dictionaries (de)"
+  },
+  "corpus": {
+   "name": "deu_web_2011_1M",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/deu_web_2011_1M.tar.gz",
+   "all": [
+    "deu_web_2011_1M",
+    "deu_news_2024_1M",
+    "deu_news_2023_1M",
+    "deu_news_2022_1M",
+    "deu_news_2021_1M",
+    "deu_news_2020_1M"
+   ]
+  }
+ },
+ "fr": {
+  "hunspell": {
+   "aff": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/fr/index.aff",
+   "dic": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/fr/index.dic",
+   "src": "wooorm/dictionaries (fr)"
+  },
+  "corpus": {
+   "name": "fra_news_2024_1M",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/fra_news_2024_1M.tar.gz",
+   "all": [
+    "fra_news_2024_1M",
+    "fra_news_2023_1M",
+    "fra_news_2022_1M",
+    "fra_news_2020_1M",
+    "fra_newscrawl_2020_1M",
+    "fra_news_2019_1M"
+   ]
+  }
+ },
+ "es": {
+  "hunspell": {
+   "aff": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/es/index.aff",
+   "dic": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/es/index.dic",
+   "src": "wooorm/dictionaries (es)"
+  },
+  "corpus": {
+   "name": "spa_web_2016_1M",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/spa_web_2016_1M.tar.gz",
+   "all": [
+    "spa_web_2016_1M",
+    "spa_web_2012_1M",
+    "spa_web_2011_1M",
+    "spa_news_2024_1M",
+    "spa_news_2023_1M",
+    "spa_news_2022_1M"
+   ]
+  }
+ },
+ "it": {
+  "hunspell": {
+   "aff": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/it/index.aff",
+   "dic": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/it/index.dic",
+   "src": "wooorm/dictionaries (it)"
+  },
+  "corpus": {
+   "name": "ita_web_2011_1M",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/ita_web_2011_1M.tar.gz",
+   "all": [
+    "ita_web_2011_1M",
+    "ita_news_2024_1M",
+    "ita_news_2023_1M",
+    "ita_news_2022_1M",
+    "ita_news_2021_1M",
+    "ita_news_2020_1M"
+   ]
+  }
+ },
+ "pt": {
+  "hunspell": {
+   "aff": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/pt-PT/index.aff",
+   "dic": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/pt-PT/index.dic",
+   "src": "wooorm/dictionaries (pt-PT)"
+  },
+  "corpus": {
+   "name": "por_news_2024_1M",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/por_news_2024_1M.tar.gz",
+   "all": [
+    "por_news_2024_1M",
+    "por_news_2023_1M",
+    "por_news_2022_1M",
+    "por_news_2020_1M",
+    "por_newscrawl_2020_1M",
+    "por_news_2019_1M"
+   ]
+  }
+ },
+ "pl": {
+  "hunspell": {
+   "aff": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/pl/index.aff",
+   "dic": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/pl/index.dic",
+   "src": "wooorm/dictionaries (pl)"
+  },
+  "corpus": {
+   "name": "pol_news_2024_1M",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/pol_news_2024_1M.tar.gz",
+   "all": [
+    "pol_news_2024_1M",
+    "pol_news_2023_1M",
+    "pol_news_2022_1M",
+    "pol_news_2021_1M",
+    "pol_newscrawl_2021_1M",
+    "pol_news_2020_1M"
+   ]
+  }
+ },
+ "tr": {
+  "hunspell": {
+   "aff": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/tr/index.aff",
+   "dic": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/tr/index.dic",
+   "src": "wooorm/dictionaries (tr)"
+  },
+  "corpus": {
+   "name": "tur_news_2024_1M",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/tur_news_2024_1M.tar.gz",
+   "all": [
+    "tur_news_2024_1M",
+    "tur_news_2023_1M",
+    "tur_news_2022_1M",
+    "tur_news_2020_1M",
+    "tur_news_2019_1M",
+    "tur_newscrawl_2018_1M"
+   ]
+  }
+ },
+ "nl": {
+  "hunspell": {
+   "aff": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/nl/index.aff",
+   "dic": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/nl/index.dic",
+   "src": "wooorm/dictionaries (nl)"
+  },
+  "corpus": {
+   "name": "nld_news_2024_1M",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/nld_news_2024_1M.tar.gz",
+   "all": [
+    "nld_news_2024_1M",
+    "nld_news_2023_1M",
+    "nld_news_2022_1M",
+    "nld_news_2021_1M",
+    "nld_news_2020_1M",
+    "nld_news_2019_1M"
+   ]
+  }
+ },
+ "cs": {
+  "hunspell": {
+   "aff": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/cs/index.aff",
+   "dic": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/cs/index.dic",
+   "src": "wooorm/dictionaries (cs)"
+  },
+  "corpus": {
+   "name": "ces_web_2012_1M",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/ces_web_2012_1M.tar.gz",
+   "all": [
+    "ces_web_2012_1M",
+    "ces_news_2024_1M",
+    "ces_news_2023_1M",
+    "ces_news_2022_1M",
+    "ces_news_2020_1M",
+    "ces_news_2019_1M"
+   ]
+  }
+ },
+ "sk": {
+  "hunspell": {
+   "aff": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/sk/index.aff",
+   "dic": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/sk/index.dic",
+   "src": "wooorm/dictionaries (sk)"
+  },
+  "corpus": {
+   "name": "slk_newscrawl_2016_1M",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/slk_newscrawl_2016_1M.tar.gz",
+   "all": [
+    "slk_newscrawl_2016_1M",
+    "slk_newscrawl_2015_1M",
+    "slk_newscrawl_2011_1M"
+   ]
+  }
+ },
+ "hu": {
+  "hunspell": {
+   "aff": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/hu/index.aff",
+   "dic": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/hu/index.dic",
+   "src": "wooorm/dictionaries (hu)"
+  },
+  "corpus": {
+   "name": "hun_news_2024_1M",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/hun_news_2024_1M.tar.gz",
+   "all": [
+    "hun_news_2024_1M",
+    "hun_news_2023_1M",
+    "hun_news_2022_1M",
+    "hun_news_2020_1M",
+    "hun_newscrawl_2017_1M",
+    "hun_newscrawl_2016_1M"
+   ]
+  }
+ },
+ "ro": {
+  "hunspell": {
+   "aff": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/ro/index.aff",
+   "dic": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/ro/index.dic",
+   "src": "wooorm/dictionaries (ro)"
+  },
+  "corpus": {
+   "name": "ron_web_2011_1M",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/ron_web_2011_1M.tar.gz",
+   "all": [
+    "ron_web_2011_1M",
+    "ron_news_2024_1M",
+    "ron_news_2022_1M",
+    "ron_news_2020_1M",
+    "ron_news_2019_1M",
+    "ron_news_2015_1M"
+   ]
+  }
+ },
+ "bg": {
+  "hunspell": {
+   "aff": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/bg/index.aff",
+   "dic": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/bg/index.dic",
+   "src": "wooorm/dictionaries (bg)"
+  },
+  "corpus": {
+   "name": "bul_news_2022_1M",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/bul_news_2022_1M.tar.gz",
+   "all": [
+    "bul_news_2022_1M",
+    "bul_news_2020_1M",
+    "bul_news_2019_1M",
+    "bul_newscrawl_2017_1M",
+    "bul_newscrawl_2015_1M",
+    "bul_newscrawl_2011_1M"
+   ]
+  }
+ },
+ "el": {
+  "hunspell": {
+   "aff": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/el/index.aff",
+   "dic": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/el/index.dic",
+   "src": "wooorm/dictionaries (el)"
+  },
+  "corpus": {
+   "name": "ell_web_2011_1M",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/ell_web_2011_1M.tar.gz",
+   "all": [
+    "ell_web_2011_1M",
+    "ell_news_2024_1M",
+    "ell_news_2023_1M",
+    "ell_news_2022_1M",
+    "ell_news_2021_1M",
+    "ell_news_2020_1M"
+   ]
+  }
+ },
+ "sv": {
+  "hunspell": {
+   "aff": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/sv/index.aff",
+   "dic": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/sv/index.dic",
+   "src": "wooorm/dictionaries (sv)"
+  },
+  "corpus": {
+   "name": "swe_news_2023_1M",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/swe_news_2023_1M.tar.gz",
+   "all": [
+    "swe_news_2023_1M",
+    "swe_news_2022_1M",
+    "swe_news_2020_1M",
+    "swe_news_2019_1M",
+    "swe_newscrawl_2018_1M",
+    "swe_wikipedia_2021_1M"
+   ]
+  }
+ },
+ "da": {
+  "hunspell": {
+   "aff": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/da/index.aff",
+   "dic": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/da/index.dic",
+   "src": "wooorm/dictionaries (da)"
+  },
+  "corpus": {
+   "name": "dan_newscrawl_2023_1M",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/dan_newscrawl_2023_1M.tar.gz",
+   "all": [
+    "dan_newscrawl_2023_1M",
+    "dan_news_2021_1M",
+    "dan_news_2020_1M",
+    "dan_newscrawl_2019_1M",
+    "dan_newscrawl_2017_1M",
+    "dan_newscrawl_2016_1M"
+   ]
+  }
+ },
+ "nb": {
+  "hunspell": {
+   "aff": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/nb/index.aff",
+   "dic": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/nb/index.dic",
+   "src": "wooorm/dictionaries (nb)"
+  },
+  "corpus": {
+   "name": "nob_newscrawl_2019_1M",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/nob_newscrawl_2019_1M.tar.gz",
+   "all": [
+    "nob_newscrawl_2019_1M",
+    "nob_news_2013_1M",
+    "nor_wikipedia_2021_1M",
+    "nor_wikipedia_2016_1M",
+    "nob_wikipedia_2014_1M",
+    "nob_wikipedia_2010_1M"
+   ]
+  }
+ },
+ "fi": {
+  "hunspell": null,
+  "corpus": {
+   "name": "fin_news_2022_1M",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/fin_news_2022_1M.tar.gz",
+   "all": [
+    "fin_news_2022_1M",
+    "fin_news_2020_1M",
+    "fin_news_2019_1M",
+    "fin_newscrawl_2017_1M",
+    "fin_newscrawl_2016_1M",
+    "fin_newscrawl_2015_1M"
+   ]
+  }
+ },
+ "et": {
+  "hunspell": {
+   "aff": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/et/index.aff",
+   "dic": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/et/index.dic",
+   "src": "wooorm/dictionaries (et)"
+  },
+  "corpus": {
+   "name": "est_newscrawl_2017_1M",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/est_newscrawl_2017_1M.tar.gz",
+   "all": [
+    "est_newscrawl_2017_1M",
+    "est_newscrawl_2016_1M",
+    "est_newscrawl_2011_1M"
+   ]
+  }
+ },
+ "lv": {
+  "hunspell": {
+   "aff": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/lv/index.aff",
+   "dic": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/lv/index.dic",
+   "src": "wooorm/dictionaries (lv)"
+  },
+  "corpus": {
+   "name": "lav_newscrawl_2016_1M",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/lav_newscrawl_2016_1M.tar.gz",
+   "all": [
+    "lav_newscrawl_2016_1M",
+    "lav_newscrawl_2011_1M"
+   ]
+  }
+ },
+ "lt": {
+  "hunspell": {
+   "aff": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/lt/index.aff",
+   "dic": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/lt/index.dic",
+   "src": "wooorm/dictionaries (lt)"
+  },
+  "corpus": {
+   "name": "lit_news_2020_1M",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/lit_news_2020_1M.tar.gz",
+   "all": [
+    "lit_news_2020_1M",
+    "lit_newscrawl_2016_1M",
+    "lit_newscrawl_2015_1M",
+    "lit_newscrawl_2014_1M",
+    "lit_newscrawl_2011_1M"
+   ]
+  }
+ },
+ "sl": {
+  "hunspell": {
+   "aff": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/sl/index.aff",
+   "dic": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/sl/index.dic",
+   "src": "wooorm/dictionaries (sl)"
+  },
+  "corpus": {
+   "name": "slv_news_2020_1M",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/slv_news_2020_1M.tar.gz",
+   "all": [
+    "slv_news_2020_1M",
+    "slv_newscrawl_2016_1M",
+    "slv_newscrawl_2015_1M",
+    "slv_newscrawl_2014_1M",
+    "slv_newscrawl_2011_1M",
+    "slv_wikipedia_2021_1M"
+   ]
+  }
+ },
+ "hr": {
+  "hunspell": {
+   "aff": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/hr/index.aff",
+   "dic": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/hr/index.dic",
+   "src": "wooorm/dictionaries (hr)"
+  },
+  "corpus": {
+   "name": "hrv_news_2020_1M",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/hrv_news_2020_1M.tar.gz",
+   "all": [
+    "hrv_news_2020_1M",
+    "hrv_newscrawl_2016_1M",
+    "hrv_newscrawl_2011_1M",
+    "hrv_wikipedia_2021_1M",
+    "hrv_wikipedia_2016_1M"
+   ]
+  }
+ },
+ "sr": {
+  "hunspell": {
+   "aff": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/sr/index.aff",
+   "dic": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/sr/index.dic",
+   "src": "wooorm/dictionaries (sr)"
+  },
+  "corpus": {
+   "name": "srp_wikipedia_2021_1M",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/srp_wikipedia_2021_1M.tar.gz",
+   "all": [
+    "srp_wikipedia_2021_1M",
+    "srp_wikipedia_2016_1M"
+   ]
+  }
+ },
+ "bs": {
+  "hunspell": {
+   "aff": "https://raw.githubusercontent.com/LibreOffice/dictionaries/master/bs_BA/bs_BA.aff",
+   "dic": "https://raw.githubusercontent.com/LibreOffice/dictionaries/master/bs_BA/bs_BA.dic",
+   "src": "LibreOffice/dictionaries (bs_BA/bs_BA)"
+  },
+  "corpus": {
+   "name": "bos_news_2020_300K",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/bos_news_2020_300K.tar.gz",
+   "all": [
+    "bos_news_2020_300K",
+    "bos_newscrawl_2015_300K",
+    "bos_newscrawl_2011_300K",
+    "bos_wikipedia_2021_300K",
+    "bos_wikipedia_2016_300K"
+   ]
+  }
+ },
+ "mk": {
+  "hunspell": {
+   "aff": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/mk/index.aff",
+   "dic": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/mk/index.dic",
+   "src": "wooorm/dictionaries (mk)"
+  },
+  "corpus": {
+   "name": "mkd_newscrawl_2011_300K",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/mkd_newscrawl_2011_300K.tar.gz",
+   "all": [
+    "mkd_newscrawl_2011_300K",
+    "mkd_wikipedia_2021_300K",
+    "mkd_wikipedia_2016_300K",
+    "mkd_wikipedia_2014_300K",
+    "mkd_wikipedia_2010_300K"
+   ]
+  }
+ },
+ "sq": {
+  "hunspell": {
+   "aff": "https://raw.githubusercontent.com/LibreOffice/dictionaries/master/sq_AL/sq_AL.aff",
+   "dic": "https://raw.githubusercontent.com/LibreOffice/dictionaries/master/sq_AL/sq_AL.dic",
+   "src": "LibreOffice/dictionaries (sq_AL/sq_AL)"
+  },
+  "corpus": {
+   "name": "sqi_news_2020_1M",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/sqi_news_2020_1M.tar.gz",
+   "all": [
+    "sqi_news_2020_1M",
+    "sqi_news_2019_1M"
+   ]
+  }
+ },
+ "be": {
+  "hunspell": null,
+  "corpus": {
+   "name": "bel_newscrawl_2015_1M",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/bel_newscrawl_2015_1M.tar.gz",
+   "all": [
+    "bel_newscrawl_2015_1M",
+    "bel_newscrawl_2011_1M"
+   ]
+  }
+ },
+ "ga": {
+  "hunspell": {
+   "aff": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/ga/index.aff",
+   "dic": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/ga/index.dic",
+   "src": "wooorm/dictionaries (ga)"
+  },
+  "corpus": {
+   "name": "gle_newscrawl_2014_300K",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/gle_newscrawl_2014_300K.tar.gz",
+   "all": [
+    "gle_newscrawl_2014_300K"
+   ]
+  }
+ },
+ "cy": {
+  "hunspell": {
+   "aff": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/cy/index.aff",
+   "dic": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/cy/index.dic",
+   "src": "wooorm/dictionaries (cy)"
+  },
+  "corpus": {
+   "name": "cym_wikipedia_2021_100K",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/cym_wikipedia_2021_100K.tar.gz",
+   "all": [
+    "cym_wikipedia_2021_100K",
+    "cym_wikipedia_2016_100K"
+   ]
+  }
+ },
+ "is": {
+  "hunspell": {
+   "aff": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/is/index.aff",
+   "dic": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/is/index.dic",
+   "src": "wooorm/dictionaries (is)"
+  },
+  "corpus": {
+   "name": "isl_newscrawl_2011_1M",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/isl_newscrawl_2011_1M.tar.gz",
+   "all": [
+    "isl_newscrawl_2011_1M"
+   ]
+  }
+ },
+ "mt": {
+  "hunspell": null,
+  "corpus": {
+   "name": "mlt_web_2012_300K",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/mlt_web_2012_300K.tar.gz",
+   "all": [
+    "mlt_web_2012_300K"
+   ]
+  }
+ },
+ "ca": {
+  "hunspell": {
+   "aff": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/ca/index.aff",
+   "dic": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/ca/index.dic",
+   "src": "wooorm/dictionaries (ca)"
+  },
+  "corpus": {
+   "name": "cat_newscrawl_2016_1M",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/cat_newscrawl_2016_1M.tar.gz",
+   "all": [
+    "cat_newscrawl_2016_1M",
+    "cat_newscrawl_2015_1M",
+    "cat_wikipedia_2021_1M",
+    "cat_wikipedia_2016_1M",
+    "cat_wikipedia_2014_1M"
+   ]
+  }
+ },
+ "eu": {
+  "hunspell": {
+   "aff": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/eu/index.aff",
+   "dic": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/eu/index.dic",
+   "src": "wooorm/dictionaries (eu)"
+  },
+  "corpus": {
+   "name": "eus_newscrawl_2012_300K",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/eus_newscrawl_2012_300K.tar.gz",
+   "all": [
+    "eus_newscrawl_2012_300K",
+    "eus_wikipedia_2021_300K",
+    "eus_wikipedia_2016_300K",
+    "eus_wikipedia_2014_300K",
+    "eus_wikipedia_2012_300K"
+   ]
+  }
+ },
+ "gl": {
+  "hunspell": {
+   "aff": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/gl/index.aff",
+   "dic": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/gl/index.dic",
+   "src": "wooorm/dictionaries (gl)"
+  },
+  "corpus": {
+   "name": "glg_wikipedia_2021_300K",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/glg_wikipedia_2021_300K.tar.gz",
+   "all": [
+    "glg_wikipedia_2021_300K",
+    "glg_wikipedia_2016_300K"
+   ]
+  }
+ },
+ "lb": {
+  "hunspell": {
+   "aff": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/lb/index.aff",
+   "dic": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/lb/index.dic",
+   "src": "wooorm/dictionaries (lb)"
+  },
+  "corpus": {
+   "name": "ltz_newscrawl_2016_300K",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/ltz_newscrawl_2016_300K.tar.gz",
+   "all": [
+    "ltz_newscrawl_2016_300K"
+   ]
+  }
+ },
+ "id": {
+  "hunspell": {
+   "aff": "https://raw.githubusercontent.com/LibreOffice/dictionaries/master/id/id_ID.aff",
+   "dic": "https://raw.githubusercontent.com/LibreOffice/dictionaries/master/id/id_ID.dic",
+   "src": "LibreOffice/dictionaries (id/id_ID)"
+  },
+  "corpus": {
+   "name": "ind_web_2012_1M",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/ind_web_2012_1M.tar.gz",
+   "all": [
+    "ind_web_2012_1M",
+    "ind_news_2024_1M",
+    "ind_news_2023_1M",
+    "ind_news_2022_1M",
+    "ind_news_2020_1M",
+    "ind_news_2019_1M"
+   ]
+  }
+ },
+ "ms": {
+  "hunspell": null,
+  "corpus": {
+   "name": "msa_newscrawl_2016_300K",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/msa_newscrawl_2016_300K.tar.gz",
+   "all": [
+    "msa_newscrawl_2016_300K",
+    "msa_wikipedia_2021_300K",
+    "msa_wikipedia_2016_300K"
+   ]
+  }
+ },
+ "vi": {
+  "hunspell": {
+   "aff": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/vi/index.aff",
+   "dic": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/vi/index.dic",
+   "src": "wooorm/dictionaries (vi)"
+  },
+  "corpus": {
+   "name": "vie_news_2022_1M",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/vie_news_2022_1M.tar.gz",
+   "all": [
+    "vie_news_2022_1M",
+    "vie_news_2020_1M",
+    "vie_mixed_2014_1M",
+    "vie_wikipedia_2021_1M",
+    "vie_wikipedia_2016_1M"
+   ]
+  }
+ },
+ "tl": {
+  "hunspell": null,
+  "corpus": {
+   "name": "tgl_wikipedia_2021_100K",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/tgl_wikipedia_2021_100K.tar.gz",
+   "all": [
+    "tgl_wikipedia_2021_100K",
+    "tgl_wikipedia_2016_100K",
+    "tgl_wikipedia_2014_100K"
+   ]
+  }
+ },
+ "sw": {
+  "hunspell": {
+   "aff": "https://raw.githubusercontent.com/LibreOffice/dictionaries/master/sw_TZ/sw_TZ.aff",
+   "dic": "https://raw.githubusercontent.com/LibreOffice/dictionaries/master/sw_TZ/sw_TZ.dic",
+   "src": "LibreOffice/dictionaries (sw_TZ/sw_TZ)"
+  },
+  "corpus": {
+   "name": "swa_wikipedia_2021_100K",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/swa_wikipedia_2021_100K.tar.gz",
+   "all": [
+    "swa_wikipedia_2021_100K",
+    "swa_wikipedia_2016_100K"
+   ]
+  }
+ },
+ "az": {
+  "hunspell": null,
+  "corpus": {
+   "name": "aze_newscrawl_2013_1M",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/aze_newscrawl_2013_1M.tar.gz",
+   "all": [
+    "aze_newscrawl_2013_1M",
+    "aze_wikipedia_2021_1M"
+   ]
+  }
+ },
+ "uz": {
+  "hunspell": null,
+  "corpus": {
+   "name": "uzb_newscrawl_2011_100K",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/uzb_newscrawl_2011_100K.tar.gz",
+   "all": [
+    "uzb_newscrawl_2011_100K",
+    "uzb_wikipedia_2021_100K",
+    "uzb_wikipedia_2016_100K",
+    "uzb_wikipedia_2014_100K"
+   ]
+  }
+ },
+ "af": {
+  "hunspell": {
+   "aff": "https://raw.githubusercontent.com/LibreOffice/dictionaries/master/af_ZA/af_ZA.aff",
+   "dic": "https://raw.githubusercontent.com/LibreOffice/dictionaries/master/af_ZA/af_ZA.dic",
+   "src": "LibreOffice/dictionaries (af_ZA/af_ZA)"
+  },
+  "corpus": {
+   "name": "afr_mixed_2019_1M",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/afr_mixed_2019_1M.tar.gz",
+   "all": [
+    "afr_mixed_2019_1M"
+   ]
+  }
+ },
+ "eo": {
+  "hunspell": {
+   "aff": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/eo/index.aff",
+   "dic": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/eo/index.dic",
+   "src": "wooorm/dictionaries (eo)"
+  },
+  "corpus": {
+   "name": "epo_web_2012_1M",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/epo_web_2012_1M.tar.gz",
+   "all": [
+    "epo_web_2012_1M",
+    "epo_newscrawl_2017_1M",
+    "epo_mixed_2012_1M"
+   ]
+  }
+ },
+ "la": {
+  "hunspell": {
+   "aff": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/la/index.aff",
+   "dic": "https://raw.githubusercontent.com/wooorm/dictionaries/main/dictionaries/la/index.dic",
+   "src": "wooorm/dictionaries (la)"
+  },
+  "corpus": {
+   "name": "lat_wikipedia_2021_100K",
+   "url": "https://downloads.wortschatz-leipzig.de/corpora/lat_wikipedia_2021_100K.tar.gz",
+   "all": [
+    "lat_wikipedia_2021_100K",
+    "lat_wikipedia_2018_100K",
+    "lat_wikipedia_2016_100K",
+    "lat_wikipedia_2014_100K"
+   ]
+  }
+ }
+}

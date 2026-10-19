@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-"""Буфер обмена и эмуляция клавиш: копирование выделения, вставка результата.
+"""Clipboard and key emulation: copying the selection, pasting the result.
 
-Всё через библиотеку keyboard (чище по модификаторам), чем pynput.
+Everything goes through the keyboard library (cleaner with modifiers than pynput).
 """
 
 import time
@@ -16,8 +16,8 @@ from .config import dbg
 
 
 def release_all_modifiers():
-    """Сообщаем ОС, что модификаторы отпущены (даже если физически зажаты),
-    чтобы наш Ctrl+C/Ctrl+V не превратился в Ctrl+Alt+...."""
+    """Tell the OS that modifiers are released (even if physically held down)
+    so that our Ctrl+C/Ctrl+V does not turn into Ctrl+Alt+...."""
     for k in ("ctrl", "alt", "shift", "left windows", "right windows",
               "right alt", "left ctrl", "right ctrl"):
         try:
@@ -28,7 +28,7 @@ def release_all_modifiers():
 
 
 def send(combo):
-    """Эмуляция сочетания (ctrl+c, ctrl+v, ctrl+a, ctrl+insert)."""
+    """Emulates a key combination (ctrl+c, ctrl+v, ctrl+a, ctrl+insert)."""
     try:
         kblib.send(combo)
     except Exception as e:
@@ -36,7 +36,7 @@ def send(combo):
 
 
 def fg_info():
-    """Заголовок и класс активного окна — для логов/диагностики."""
+    """Title and class of the active window — for logs/diagnostics."""
     try:
         u = ctypes.windll.user32
         u.GetForegroundWindow.restype = ctypes.c_void_p
@@ -52,7 +52,7 @@ def fg_info():
 
 
 def _rand_token():
-    # без нулевого символа! иначе Windows обрезает буфер и сравнение ломается
+    # no NUL character! otherwise Windows truncates the clipboard and the comparison breaks
     return "TFmark_" + "".join(random.choices(string.ascii_letters + string.digits, k=16))
 
 
@@ -75,11 +75,11 @@ def clip_set(text):
 
 
 def grab_selection(copy_delay, select_all=False, attempts=3, polls=30):
-    """Копирует выделенный текст (или весь текст поля при select_all=True).
-    attempts/polls — сколько попыток копирования и как долго ждать (для быстрой
-    проверки выделения можно взять attempts=1, polls поменьше).
-    Возвращает (selected_text|None, original_clipboard)."""
-    dbg("активное окно:", fg_info())
+    """Copies the selected text (or the whole field's text when select_all=True).
+    attempts/polls — how many copy attempts and how long to wait (for a quick
+    selection check use attempts=1 and fewer polls).
+    Returns (selected_text|None, original_clipboard)."""
+    dbg("active window:", fg_info())
     original = clip_get()
 
     time.sleep(copy_delay)
@@ -106,9 +106,9 @@ def grab_selection(copy_delay, select_all=False, attempts=3, polls=30):
                 break
         if selected != sentinel:
             break
-        dbg(f"копирование: попытка {attempt + 1} ({combo}) пустая")
+        dbg(f"copy: attempt {attempt + 1} ({combo}) empty")
 
-    dbg("скопировано:", repr(selected)[:80] if selected != sentinel else "НИЧЕГО")
+    dbg("copied:", repr(selected)[:80] if selected != sentinel else "NOTHING")
 
     if selected == sentinel:
         clip_set(original)
@@ -122,4 +122,4 @@ def paste_text(new_text, original_clipboard):
     time.sleep(0.04)
     send("ctrl+v")
     time.sleep(0.12)
-    clip_set(original_clipboard)             # вернуть прежний буфер
+    clip_set(original_clipboard)             # restore the previous clipboard

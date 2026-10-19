@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-"""TextFixer — исправление текста по горячей клавише (облачный Gemini) + режим T9
-+ перевод раскладки. Пакет разбит на модули: config, gemini, keyio, toasts,
+"""TextFixer — text correction by hotkey (cloud Gemini) + T9 mode
++ keyboard layout conversion. The package is split into modules: config, gemini, keyio, toasts,
 engine, t9, autostart, app."""
 
-__version__ = "2.0"
+__version__ = "3.0"

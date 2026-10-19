@@ -1,26 +1,26 @@
 # -*- coding: utf-8 -*-
-"""Всплывающие уведомления (тосты) в углу экрана, скрытые от записи экрана."""
+"""Pop-up notifications (toasts) in the screen corner, hidden from screen recording."""
 
 import queue
 import ctypes
 import tkinter as tk
 
-# WDA_EXCLUDEFROMCAPTURE (Win10 2004+/Win11): окно видно глазами, но не в записи/стриме.
+# WDA_EXCLUDEFROMCAPTURE (Win10 2004+/Win11): the window is visible on screen but not in recordings/streams.
 WDA_EXCLUDEFROMCAPTURE = 0x00000011
 
 
 def exclude_from_capture(win):
-    """Делает окно невидимым для скриншотов/записи/стрима."""
+    """Makes the window invisible to screenshots/recordings/streams."""
     try:
         win.update_idletasks()
         hwnd = ctypes.windll.user32.GetParent(win.winfo_id()) or win.winfo_id()
         ctypes.windll.user32.SetWindowDisplayAffinity(hwnd, WDA_EXCLUDEFROMCAPTURE)
     except Exception as e:
-        print(f"[capture] не удалось скрыть окно: {e}")
+        print(f"[capture] failed to hide window: {e}")
 
 
 class ToastManager:
-    """Уведомления в правом нижнем углу (создаются в главном Tk-потоке через очередь)."""
+    """Notifications in the bottom-right corner (created in the main Tk thread via a queue)."""
 
     def __init__(self, root):
         self.root = root
