@@ -19,17 +19,22 @@ if (-not (Get-Command gh -ErrorAction SilentlyContinue)) { throw "GitHub CLI (gh
 if (-not (Test-Path (Join-Path $dist "manifest.json"))) { throw "No $dist\manifest.json - run tools\build_all.py first" }
 
 $files = @(Get-ChildItem $dist -Filter *.pkl.gz | ForEach-Object FullName) + (Join-Path $dist "manifest.json")
-$notes = Join-Path $root "THIRD_PARTY_NOTICES.md"
 Write-Host "Release $Tag in $Repo : $($files.Count) files"
 
-gh release view $Tag --repo $Repo *> $null
+# gh writes progress/"not found" to stderr; in Windows PowerShell 5.1 that must not be
+# treated as a terminating error, so check exit codes explicitly
+$ErrorActionPreference = "Continue"
+$null = gh release view $Tag --repo $Repo 2>&1
 if ($LASTEXITCODE -ne 0) {
     gh release create $Tag --repo $Repo --title "T9 dictionaries ($Tag)" `
         --notes "T9 dictionaries for TextFixer. The app downloads them automatically on first run. Sources and licenses: THIRD_PARTY_NOTICES.md"
+    if ($LASTEXITCODE -ne 0) { throw "Could not create release $Tag" }
 }
-# 10 files at a time, replacing already uploaded ones
-for ($i = 0; $i -lt $files.Count; $i += 10) {
-    $chunk = $files[$i..([Math]::Min($i + 9, $files.Count - 1))]
+# 5 files at a time, replacing already uploaded ones
+for ($i = 0; $i -lt $files.Count; $i += 5) {
+    $chunk = $files[$i..([Math]::Min($i + 4, $files.Count - 1))]
+    Write-Host ("uploading {0}-{1} of {2}" -f ($i + 1), ($i + $chunk.Count), $files.Count)
     gh release upload $Tag @chunk --repo $Repo --clobber
+    if ($LASTEXITCODE -ne 0) { throw "Upload failed: $($chunk -join ', ')" }
 }
 Write-Host "Done. Don't forget: DICT_REPO = `"$Repo`" in textfixer/languages.py"
